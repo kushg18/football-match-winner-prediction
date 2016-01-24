@@ -45,12 +45,13 @@ for j in range(10):
 	num+=1
 
 train_book.save("/home/saurabh/beproj/trainingset1.xls")
-'''
-rtrain_book=xlrd.open_workbook('trainingset1.xls')
+
+rtrain_book=xlrd.open_workbook('training.xlsx')
 svmdatasheet=rtrain_book.sheet_by_index(0)
-featureobj.SVMformat(svmdatasheet)
-
-
+with open('svmdataformat', 'w') as f:
+    featureobj.SVMformat(svmdatasheet,f)
+f.closed
+'''
 for k,v in teams.iteritems():
 	print k
 	print '------------------'

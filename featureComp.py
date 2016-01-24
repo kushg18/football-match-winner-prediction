@@ -1,5 +1,6 @@
 class Feature:
     counter=1
+    string=''
     def featureCompute(self,first_sheet,sheet1,teams,matches_played):
         """
         Computes the training set features
@@ -53,13 +54,21 @@ class Feature:
         GCcount=GCcount/r
         #print t,CScount,'\n'
         return [form,aq,CScount,GCcount]
-    '''
-    def SVMformat(self,sheet):
-        for i in range(1,3289):
-            result=sheet.cell(i,10).value
-            if result == 'D':
 
-    '''
+    def SVMformat(self,trainsheet,fileobj):
+        for i in range(1,3289):
+            Feature.string+=str(int(trainsheet.cell(i,0).value))+' '
+            for j in range(1,8):
+                Feature.string+=str(trainsheet.cell(i,j).value)+' '
+            Feature.string+=str(trainsheet.cell(i,8).value)+'\n'
+            fileobj.write(Feature.string)
+            Feature.string=''
+
+
+
+
+
+
 
 
 
