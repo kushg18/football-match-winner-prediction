@@ -1,4 +1,3 @@
-import xlrd
 def findClass(r1,r2):
 	if r1 and r2 in range(1,6):
 		c1=0

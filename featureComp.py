@@ -13,11 +13,22 @@ class Feature:
                 list2=Feature.compute(t2,teams,matches_played[t2]-1,5)
                 row=sheet1.row(Feature.counter)
                 list1.extend(list2)
-                #list1.append(t1)
-                #list1.append(t2)
+                list1.append(t1)
+                list1.append(t2)
+                result=first_sheet.cell(i,5).value
+                if result == 'D':
+                    list1.append(3)
+                elif result == 'H':
+                    list1.append(1)
+                else :
+                    list1.append(2)
                 Feature.counter+=1
                 for j in range(len(list1)):
-                    row.write(j,list1[j])
+                    if not j == len(list1)-1:
+                        entry=str(j+1)+':'+str(list1[j])
+                    else:
+                        entry=list1[j]
+                    row.write(j,entry)
             elif matches_played[t1] <= 4 and matches_played[t2] <=4:
                 pass
           #  list1=compute(t1,teams,)
@@ -42,6 +53,15 @@ class Feature:
         GCcount=GCcount/r
         #print t,CScount,'\n'
         return [form,aq,CScount,GCcount]
+    '''
+    def SVMformat(self,sheet):
+        for i in range(1,3289):
+            result=sheet.cell(i,10).value
+            if result == 'D':
+
+    '''
+
+
 
 
 
