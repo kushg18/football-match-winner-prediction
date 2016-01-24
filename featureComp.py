@@ -2,7 +2,7 @@ class Feature:
     counter=1
     def featureCompute(self,first_sheet,sheet1,teams,matches_played):
         """
-
+        Computes the training set features
         :rtype: none
         """
         for i in range(1,381):
