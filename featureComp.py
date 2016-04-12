@@ -1,7 +1,7 @@
 class Feature:
     counter=1
     string=''
-    def featureCompute(self,first_sheet,sheet1,teams,matches_played):
+    def featureCompute(self,first_sheet,sheet1,teams,matches_played,teamprofile):
         """
         Computes the training set features
         :rtype: none
@@ -12,10 +12,12 @@ class Feature:
             if matches_played[t1]> 4 and matches_played[t2]> 4:
                 list1=Feature.compute(t1,teams,matches_played[t1]-1,5)
                 list2=Feature.compute(t2,teams,matches_played[t2]-1,5)
+                teamprofile[t1].append(list1)
+                teamprofile[t2].append(list2)
                 row=sheet1.row(Feature.counter)
                 list1.extend(list2)
-                list1.append(t1)
-                list1.append(t2)
+                #list1.append(t1)
+                #list1.append(t2)
                 result=first_sheet.cell(i,5).value
                 if result == 'D':
                     list1.append(3)
@@ -24,17 +26,23 @@ class Feature:
                 else :
                     list1.append(2)
                 Feature.counter+=1
+                if i==6:
+                    print "break"
+                    break
                 for j in range(len(list1)):
+                    '''
                     if not j == len(list1)-1:
                         entry=str(j+1)+':'+str(list1[j])
                     else:
                         entry=list1[j]
-                    row.write(j,entry)
+                    '''
+                    row.write(j,list1[j])
             elif matches_played[t1] <= 4 and matches_played[t2] <=4:
                 pass
           #  list1=compute(t1,teams,)
             matches_played[t1]+=1
             matches_played[t2]+=1
+
 
 
 
@@ -55,10 +63,10 @@ class Feature:
         #print t,CScount,'\n'
         return [form,aq,CScount,GCcount]
 
-    def SVMformat(self,trainsheet,fileobj):
-        for i in range(1,3289):
-            Feature.string+=str(int(trainsheet.cell(i,0).value))+' '
-            for j in range(1,8):
+    def WEKAformat(self,trainsheet,fileobj):
+        fileobj.write("@RELATION football\n@ATTRIBUTE form1 numeric\n@ATTRIBUTE aq1 numeric \n@ATTRIBUTE cs1 numeric \n@ATTRIBUTE gc1 numeric \n@ATTRIBUTE form2 numeric \n@ATTRIBUTE aq2 numeric \n@ATTRIBUTE cs2 numeric \n@ATTRIBUTE gc2 numeric \n@ATTRIBUTE class {1.0,2.0,3.0} \n@DATA\n")
+        for i in range(1,331):
+            for j in range(8):
                 Feature.string+=str(trainsheet.cell(i,j).value)+' '
             Feature.string+=str(trainsheet.cell(i,8).value)+'\n'
             fileobj.write(Feature.string)
