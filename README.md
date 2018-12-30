@@ -17,7 +17,7 @@ This project is about learning and implementing ***machine learning*** models to
 
 ### Data Selection and Extraction ### 
 -----------------------------
-We selected barclays premier league website as our main source of data. To extract the data we wrote a script that goes through each year data and for each year it extracts tables after each match day. You can find the data [here](https://github.com/kushg18/football-match-winner-prediction/tree/master/MatchDays). 
+We selected barclays premier league website as our main source of data. To extract the data we wrote a script that goes through each year's data and for each year it extracts fixture table after the results of each match day. You can find the data [here](https://github.com/kushg18/football-match-winner-prediction/tree/master/MatchDays). 
 
 ### Feature Extraction ### 
 -----------------------------
