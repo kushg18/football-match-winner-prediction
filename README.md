@@ -3,7 +3,7 @@ Football Match Winner Prediction
 
 ### About ###
 -----------------------------
-This project is about learning and implementing machine learning models to predict the outcome of football match and identify the winning team. We have extracted and built our own features that calculates and provides the stats of the winning team. Features are the main essense of our project that highly impacts are end results.
+This project is about learning and implementing ***machine learning*** models to predict the outcome of football match and identify the winning team. We have extracted and built our ***own features*** that calculates and provides the stats per match. Features are the main essense of our project that highly impacts are end results.
 
 ### Technology Stack ### 
 -----------------------------
