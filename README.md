@@ -15,6 +15,9 @@ This project is about learning and implementing ***machine learning*** models to
 6. Matlab
 7. Netbeans
 
+### Data Selection and Extraction ### 
+-----------------------------
+We selected barclays premier league website as our main source of data. To extract the data we wrote a script that goes through each year data and for each year it extracts tables after each match day. You can find the data [here](https://github.com/kushg18/football-match-winner-prediction/tree/master/MatchDays). 
 
 ### Feature Extraction ### 
 -----------------------------
@@ -26,7 +29,6 @@ This project is about learning and implementing ***machine learning*** models to
     - Goals Scored
 3. Goals Conceded
 4. Clean Sheets
-
 
 ### Machine Leaning Models ### 
 -----------------------------
@@ -48,3 +50,8 @@ Home Page |  Team Selection
 Predicitons Per Match |  Stats Per Match
 :-------------------------:|:-------------------------:
 ![alt text](https://github.com/kushg18/football-match-winner-prediction/blob/master/finalgui/3Predictions.png)  |  ![alt text](https://github.com/kushg18/football-match-winner-prediction/blob/master/finalgui/4.PerMatchStats.png)
+
+
+### Technical Research Paper ###
+-----------------------------------
+Our paper is published at International Journal of Computer Applications. You can access it using this [link](https://www.ijcaonline.org/archives/volume154/number3/26474-2016912066)
