@@ -12,8 +12,9 @@ This project is about learning and implementing ***machine learning*** models to
 3. Matlab
 4. Linux
 5. Machine Learning 
-6. Matlab
-7. Netbeans
+6. Netbeans
+7. Pycharm
+8. Matlab
 
 ### Data Selection and Extraction ### 
 -----------------------------
@@ -43,7 +44,7 @@ We selected barclays premier league website as our main source of data. To extra
 2. Based on the given model it provides prediction results for all the fixtures suggested for that particular year.
 3. It also provides a way to look at stats per match defending the idea behind the predicted results.
 
-Home Page |  Team Selection
+Home Page |  Team Selection to View Stats
 :-------------------------:|:-------------------------:
 ![alt text](https://github.com/kushg18/football-match-winner-prediction/blob/master/finalgui/1Home.png)  |  ![alt text](https://github.com/kushg18/football-match-winner-prediction/blob/master/finalgui/2TeamSelection.png)
 
