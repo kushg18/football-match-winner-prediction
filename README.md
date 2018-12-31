@@ -31,7 +31,7 @@ We selected barclays premier league website as our main source of data. To extra
 3. Goals Conceded
 4. Clean Sheets
 
-### Machine Leaning Models ### 
+### Machine Learning Models ### 
 -----------------------------
 1. Logistic Regression
 2. Vote Algorithm
